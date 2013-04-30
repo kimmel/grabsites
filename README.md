@@ -11,6 +11,6 @@ Next create a file named 'site_list' and add urls one per line to fetch.
 
 Now set the file permissions and run.
 
-    chmod +x get.pl
-    ./get.pl
+    chmod +x grabsites.pl
+    ./grabsites.pl
 
