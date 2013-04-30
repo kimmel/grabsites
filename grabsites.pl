@@ -21,8 +21,8 @@ foreach my $site (@sources) {
     $warc_name =~ s/\/$//xms;
     $warc_name =~ s/\//_/gxms;
 
-    my $result = say
-        qq{wget -e robots=off --mirror --page-requisites --waitretry 5 --timeout 60 --tries 5 --wait 1 --warc-header "operator: Archive Team" --warc-cdx --warc-file="$warc_name" -U "$user_agent" "$site"};
+    my $result
+        = qx{wget -e robots=off --mirror --page-requisites --waitretry 5 --timeout 60 --tries 5 --wait 1 --warc-header "operator: Archive Team" --warc-cdx --warc-file="$warc_name" -U "$user_agent" "$site"};
 }
 
 $runtime = time - $runtime;
