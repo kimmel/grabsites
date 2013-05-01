@@ -8,8 +8,11 @@ use utf8::all;
 my $runtime = time;
 
 open my $input, '<', 'site_list';
-my @sources = <$input>;
+my @lines = <$input>;
 close $input;
+
+my %seen = ();
+my @sources = grep { ! $seen{ $_ }++ } @lines;
 
 my $user_agent = 'Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US)';
 
