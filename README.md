@@ -5,7 +5,7 @@ Grab multiple websites with wget for archiving.
 
 First install the dependencies from CPAN.
 
-    cpan autodie utf8::all
+    cpan IPC::System::Simple autodie utf8::all
 
 Next create a file named 'site_list' and add urls one per line to fetch.
 
