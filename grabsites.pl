@@ -52,7 +52,7 @@ C<grabsites.pl> - Download a list of sites with wget & warc support
 
 head1 USAGE
 
-grabsites.pl <item>
+grabsites.pl <site_list>
 
 =head1 HOMEPAGE
 
